@@ -23,10 +23,4 @@
 
     $result = new operate(8,13);
     echo $result;
-
-    
-
-
-
-
 ?>
