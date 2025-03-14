@@ -18,17 +18,17 @@
 
         // set y get
         public function setName(string $name) : void { 
-            $this->name = strtolower($name);
+            $this->name = $name;
         }
         public function getName() : string {
-            return ucwords($this->name);
+            return ucwords(strtolower($this->name));
         }
 
         public function setLastName(string $lastName) : void {
-            $this->lastName = strtolower($lastName);
+            $this->lastName = $lastName;
         }
         public function getLastName() : string {
-            return ucwords($this->lastName);
+            return ucwords(strtolower($this->lastName));
         }
 
         public function setAge(int $age) : void{
@@ -41,17 +41,12 @@
         //toString
         public function __toString() : string
         {
-            return "$this->name $this->lastName tiene $this->age\n";
+            return $this->getName() . " " . $this->getLastName() . " tiene " . $this->getAge() . " años" . PHP_EOL;
         }
     }
 
-    $alumno = new PrintData("Manolito", "Gafotas", 8);
+    $alumno = new PrintData("manOLito", "GAfotAs", 8);
 
     echo $alumno;
-
-
-
-
-
-
+    
 ?>
